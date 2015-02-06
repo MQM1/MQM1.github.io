@@ -53,4 +53,21 @@ PICTURE: http://www.etftrends.com/wp-content/uploads/2012/02/xcommodity-etf.jpg.
 http://kmy.erciyes.edu.tr/ckfinder/userfiles/images/d%C4%B1%C5%9F%C4%B1d%C4%B1%C5%9F%C4%B1.jpg (commodity_2)
 
 DESCRIPTION: This database produces data on the movement of goods in the United States. It provides information on commodities shipped, their value, weight, and mode of transportation, as well as the origin and destination of shipments of commodities from manufacturing, mining, wholesale, and selected retail and services establishments.
-WHY: This data set could be very informative with respect to teaching users/viewers about American commerce with respect to commodities, especially considering location and movement to point of use/consumption. From an economics perspective, this data set could provide a good basis for exploratory data visualizations.
+WHY: This data set could be very informative with respect to teaching users/viewers about American commerce with respect to commodities, especially considering location and movement to point of use/consumption. From an economics perspective, this data set could provide a good basis for exploratory data visualizations and create a learning tool for understanding commerce and economy.
+
+MUSIC
+SOURCE: https://www.opensciencedatacloud.org/publicdata/million-song-dataset/
+PICTURE: http://fccsr.org/wp-content/uploads/2014/04/music-rainbow.jpg (music_1)
+		http://pichost.me/1884123/ (music_2)
+
+DESCRIPTION: The core of the dataset is the feature analysis and metadata for one million songs, provided by The Echo Nest. The dataset does not include any audio, only the derived features.
+WHY: From an exploratory perspective, this dataset might provide some interesting insights on patterns or similarities in music and lyrics. Music is something that interests many people, and features like iTunes Genius tends to fascinate users with it's ability to find "similar songs" that sound nothing like the original. This is a potentially exciting prospect: exploratory data visualizations in music.
+
+
+GENOMES
+SOURCE: https://www.opensciencedatacloud.org/publicdata/1000-genomes-project/
+PICTURE:http://www.um.es/prinum/cienciaymedia/img/genoma.jpg (genome_1)
+		https://www.msu.edu/~vanalsta/human-genome-ten-years-in_17889_600x450.jpg (genome_2)
+
+DESCRIPTION: The 1000 Genomes Project is an international effort to create a detailed catalog human genetic variation. The plan for the full project is to sequence about 2,500 samples from populations around the world at 4X or better coverage. Although this plan continues to change as better sequencing technologies come online. Recent improvements in sequencing technology ("next-gen" sequencing platforms) have sharply reduced the cost of sequencing. The 1000 Genomes Project is the first project to sequence the genomes of a large number of people, to provide a comprehensive resource on human genetic variation.
+WHY: Genetics has become a hot topic for exploration in recent years in response to scientific advancement and reduction in cost of analysis. This could be a very rich data set in exploring Human Genetics in almost any aspect, such as trait-to-ethnicity mappings, regional differences, percent-of-population traits, and any trends therein.The Human Genome is not only interesting to scientists, but also the general public, as it informaiton regarding genetics gives us insightful understanding of our history and evolution.
