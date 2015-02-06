@@ -52,5 +52,5 @@ SOURCE: http://catalog.data.gov/dataset/commodity-flow-survey
 PICTURE: http://www.etftrends.com/wp-content/uploads/2012/02/xcommodity-etf.jpg.pagespeed.ic.xChietXXbo.jpg (commodity_1)
 http://kmy.erciyes.edu.tr/ckfinder/userfiles/images/d%C4%B1%C5%9F%C4%B1d%C4%B1%C5%9F%C4%B1.jpg (commodity_2)
 
-DESCRIPTION:
-WHY:
+DESCRIPTION: This database produces data on the movement of goods in the United States. It provides information on commodities shipped, their value, weight, and mode of transportation, as well as the origin and destination of shipments of commodities from manufacturing, mining, wholesale, and selected retail and services establishments.
+WHY: This data set could be very informative with respect to teaching users/viewers about American commerce with respect to commodities, especially considering location and movement to point of use/consumption. From an economics perspective, this data set could provide a good basis for exploratory data visualizations.
