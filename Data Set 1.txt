@@ -19,8 +19,8 @@ Why Interesting
 
 ENERGY
 SOURCE: data.gov EIA
-PICTURE: http://www.dentons.com/~/media/Images/Website/Background%20Images/Industry%20Sectors/Energy/energy-2.jpg
-         http://upload.wikimedia.org/wikipedia/commons/d/d6/Coal_power_plant_Datteln_2_Crop1.png
+PICTURE: http://www.dentons.com/~/media/Images/Website/Background%20Images/Industry%20Sectors/Energy/energy-2.jpg (energy_1)
+         http://upload.wikimedia.org/wikipedia/commons/d/d6/Coal_power_plant_Datteln_2_Crop1.png (energy_2)
 DESCRIPTION: This data set shows many different aspects of energy usage and consumption by source:
 electricity in different categories
 State Energy Data System in categories
@@ -29,5 +29,20 @@ Natural Gas
 Coal
 Short-Term Energy Outlook
 Annual Energy Outlook
-WHY: It would be interesting to see energy trends by location, time and source, and understand the environmental implications on the respective area grids (emissions, EPA restrictions, recycling efforts, etc), especially in the "Outlook" sets.
+WHY: It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.
 
+INCOME vs. SPENDING
+SOURCE: http://catalog.data.gov/dataset/consumer-expenditure-survey
+PICTURE:http://farm7.staticflickr.com/6106/6355818699_492128f721_o.jpg (consumer_1)
+         http://q10travelandtours.com.ph/wp-content/uploads/2013/08/Budget-Piggy-Bank.jpg (consumer_2)
+DESCRIPTION: This data set shows information on the buying habits of American consumers, 
+including data on their expenditures, income, and consumer unit (families and single consumers) characteristics. 
+The survey data are collected for the Bureau of Labor Statistics by the U.S. Census Bureau.
+The CE collects information on all spending components including food, housing, apparel and services, 
+transportation, entertainment, and out-of-pocket health care costs including insurance premiums.
+WHY: Spending behaviors and cost allocations would be insightful information to understand how Americans
+spending their money, what their priorities are, and possibly see if location has an effect on this. It's
+also interesting to see just how much information is available in this data set with respect to people's 
+perception of their privacy.
