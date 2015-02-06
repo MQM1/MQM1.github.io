@@ -20,6 +20,7 @@ Why Interesting
 ENERGY
 SOURCE: data.gov EIA
 PICTURE: http://www.dentons.com/~/media/Images/Website/Background%20Images/Industry%20Sectors/Energy/energy-2.jpg
+         http://upload.wikimedia.org/wikipedia/commons/d/d6/Coal_power_plant_Datteln_2_Crop1.png
 DESCRIPTION: This data set shows many different aspects of energy usage and consumption by source:
 electricity in different categories
 State Energy Data System in categories
