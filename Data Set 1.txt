@@ -3,6 +3,11 @@ Picture
 Strengths
 What kind of data we like to look at
 
+MEGAN
+<<will send avatar>>
+Strengths: Analysis, Creative Visualization, Abstraction
+Interests: 
+
 DATA SOURCES
 Link
 Description
@@ -21,3 +26,4 @@ Coal
 Short-Term Energy Outlook
 Annual Energy Outlook
 WHY: It would be interesting to see energy trends by location, time and source, and understand the environmental implications on the respective area grids (emissions, EPA restrictions, recycling efforts, etc), especially in the "Outlook" sets.
+
