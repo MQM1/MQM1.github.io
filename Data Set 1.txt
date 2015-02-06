@@ -18,7 +18,7 @@ Why Interesting
 
 
 ENERGY
-SOURCE: data.gov EIA
+SOURCE: http://catalog.data.gov/dataset/energy-usage-analysis-system
 PICTURE: http://www.dentons.com/~/media/Images/Website/Background%20Images/Industry%20Sectors/Energy/energy-2.jpg (energy_1)
          http://upload.wikimedia.org/wikipedia/commons/d/d6/Coal_power_plant_Datteln_2_Crop1.png (energy_2)
 DESCRIPTION: This data set shows many different aspects of energy usage and consumption by source:
@@ -46,3 +46,11 @@ WHY: Spending behaviors and cost allocations would be insightful information to 
 spending their money, what their priorities are, and possibly see if location has an effect on this. It's
 also interesting to see just how much information is available in this data set with respect to people's 
 perception of their privacy.
+
+COMMODITY FLOW
+SOURCE: http://catalog.data.gov/dataset/commodity-flow-survey
+PICTURE: http://www.etftrends.com/wp-content/uploads/2012/02/xcommodity-etf.jpg.pagespeed.ic.xChietXXbo.jpg (commodity_1)
+http://kmy.erciyes.edu.tr/ckfinder/userfiles/images/d%C4%B1%C5%9F%C4%B1d%C4%B1%C5%9F%C4%B1.jpg (commodity_2)
+
+DESCRIPTION:
+WHY:
