@@ -1,0 +1,23 @@
+INDIVIDUAL
+Picture
+Strengths
+What kind of data we like to look at
+
+DATA SOURCES
+Link
+Description
+Why Interesting
+
+
+ENERGY
+SOURCE: data.gov EIA
+PICTURE: http://www.dentons.com/~/media/Images/Website/Background%20Images/Industry%20Sectors/Energy/energy-2.jpg
+DESCRIPTION: This data set shows many different aspects of energy usage and consumption by source:
+electricity in different categories
+State Energy Data System in categories
+Petroleum
+Natural Gas
+Coal
+Short-Term Energy Outlook
+Annual Energy Outlook
+WHY: It would be interesting to see energy trends by location, time and source, and understand the environmental implications on the respective area grids (emissions, EPA restrictions, recycling efforts, etc), especially in the "Outlook" sets.
