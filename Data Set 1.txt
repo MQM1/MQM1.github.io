@@ -8,13 +8,7 @@ MEGAN
 Strengths: Analysis, Creative Visualization, Abstraction
 Interests: 
 
-Mingran
-datset name:
 
-DATA SOURCES
-Link
-Description
-Why Interesting
 
 
 ENERGY
@@ -71,3 +65,12 @@ PICTURE:http://www.um.es/prinum/cienciaymedia/img/genoma.jpg (genome_1)
 
 DESCRIPTION: The 1000 Genomes Project is an international effort to create a detailed catalog human genetic variation. The plan for the full project is to sequence about 2,500 samples from populations around the world at 4X or better coverage. Although this plan continues to change as better sequencing technologies come online. Recent improvements in sequencing technology ("next-gen" sequencing platforms) have sharply reduced the cost of sequencing. The 1000 Genomes Project is the first project to sequence the genomes of a large number of people, to provide a comprehensive resource on human genetic variation.
 WHY: Genetics has become a hot topic for exploration in recent years in response to scientific advancement and reduction in cost of analysis. This could be a very rich data set in exploring Human Genetics in almost any aspect, such as trait-to-ethnicity mappings, regional differences, percent-of-population traits, and any trends therein.The Human Genome is not only interesting to scientists, but also the general public, as it informaiton regarding genetics gives us insightful understanding of our history and evolution.
+
+
+Mingran
+
+EDUCATION:
+SOURCE: http://catalog.data.gov/dataset/2010-school-survey-on-crime-and-safety
+PICTURE: https://www.google.com/search?q=SCHOOL+SAFETY&espv=2&biw=1920&bih=978&source=lnms&tbm=isch&sa=X&ei=KHnWVPqQOse9ggThoYSACg&ved=0CAYQ_AUoAQ#imgdii=_&imgrc=HFrblVkf87NsYM%253A%3BrJ2KTawokeEaGM%3Bhttp%253A%252F%252Fwww.celebrityparentsmag.com%252Fwp-content%252Fuploads%252F2014%252F09%252Fschool-safety.jpg%3Bhttp%253A%252F%252Fwww.celebrityparentsmag.com%252Fmore-young-children-getting-injured-at-school%252F%3B541%3B359
+DESCRIPTION: The 2010 School Survey on Crime and Safety is a study that is part of the School Survey on Crime and Safety program. It is a cross-sectional survey of the nation's public schools designed to provide estimates of school crime, discipline, disorder, programs and policies. SSOCS is administered to public primary, middle, high, and combined school principals in the spring of even numbered school years. The study was conducted using a questionnaire and telephone follow-ups of school principals. Public schools were sampled in the spring of 2010 to participate in the study. The study’s response rate was 74.3 percent. A number of key statistics on a variety of topics can be produced with SSOCS data.
+WHY: School crime and safety are becoming important topics with regard to study environments. Many schools have set up their own departments for criminal control to ensure the safety of students and faculties. Such data will be paid more attention with primary and middle schools because those students are younger and their parents concerned so much on whether their children will be safe during school time. Moreover, when investigative results are presented, students, parents and teachers must hope that the safety systems will not only appear within the school area, but also appear in greater ranges. And, the national security system needs to think much of this. 
