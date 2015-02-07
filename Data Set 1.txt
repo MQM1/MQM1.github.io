@@ -67,7 +67,9 @@ DESCRIPTION: The 1000 Genomes Project is an international effort to create a det
 WHY: Genetics has become a hot topic for exploration in recent years in response to scientific advancement and reduction in cost of analysis. This could be a very rich data set in exploring Human Genetics in almost any aspect, such as trait-to-ethnicity mappings, regional differences, percent-of-population traits, and any trends therein.The Human Genome is not only interesting to scientists, but also the general public, as it informaiton regarding genetics gives us insightful understanding of our history and evolution.
 
 
-Mingran
+
+
+<<Mingran>>
 
 EDUCATION:
 SOURCE: http://catalog.data.gov/dataset/2010-school-survey-on-crime-and-safety
