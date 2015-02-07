@@ -69,7 +69,7 @@ WHY: Genetics has become a hot topic for exploration in recent years in response
 
 
 
-<<Mingran>>
+--Mingran--
 
 EDUCATION:
 SOURCE: http://catalog.data.gov/dataset/2010-school-survey-on-crime-and-safety
