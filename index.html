@@ -23,30 +23,62 @@
     <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="js/jquery.equalheights.js"></script>
     
-         
-    <script src='js/camera.js'></script>
-    <!--[if (gt IE 9)|!(IE)]><!-->
-        <script src="js/jquery.mobile.customized.min.js"></script>
-    <!--<![endif]-->
+  <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+	<script src="jquery-ui/jquery-ui.js"></script>
+	     
     
     <script>	
-        $(window).load( function(){	
-            
-        	   jQuery('.camera_wrap').camera();	 
-               
+    $(function() {
+        var dialog;
+        dialog = $( "#dialog-form" ).dialog({
+    			autoOpen: false,
+    			height: 600,
+    			width: 600,
+    			modal: true,
+    			buttons: {
+    				OKay: function() {
+    					dialog.dialog( "close" );
+    				}
+    			},
+    			close: function() {
+    			},
+    			open: function (event, ui) {
+                $(".ui-widget-overlay").css({
+                    opacity: 0.9,
+                });
+            },
+    		});
+		
+    		
+    		$( "#btn-link-1" ).click(function() {
+         	dialog.dialog( "open" ).focus();
         });
+	});
+		
     </script>
-    
-    
-    <!--[if lt IE 9]>
-    <div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>  
-    <link rel="stylesheet" href="assets/tm/css/tm_docs.css" type="text/css" media="screen">
-    <script src="assets/assets/js/html5shiv.js"></script> 
-    <script src="assets/assets/js/respond.min.js"></script>
-  <![endif]-->
+
 </head>
 
 <body>
+ <!--==============================pop up form=================================-->
+  <div id="dialog-form" title="ENERGY">
+    <img src="assets/images/Energy_2.png" width="230" height="180"/>
+    <img src="assets/images/energy_1.jpg" width="230" height="180"/>
+	    <pre>DESCRIPTION: This data set shows many different aspects of energy usage and consumption by source:
+electricity in different categories
+State Energy Data System in categories
+Petroleum
+Natural Gas
+Coal
+Short-Term Energy Outlook
+Annual Energy Outlook
+WHY: It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.</pre>
+  </div>
+<!--==============================header=================================-->
+
+
 <!--==============================header=================================-->
 <header id="header">
       <div class="container">
@@ -57,7 +89,7 @@
 <!--==============================content=================================-->
 <div id="content">
 
-    <!--==============================row2=================================-->
+    <!--==============================team members=================================-->
     <div class="row_2">
         <div class="container">
             <div class="row">
@@ -74,7 +106,7 @@
                         <div class="box2">
                             <a href="index-qlong.html">
                                 <p>Quanzheng Long</p>
-                                <figure><img src="img/page1_img2.jpg" alt=""></figure>
+                                <figure><img src="img/hainan.png" alt=""></figure>
                             </a>
                         </div>
                     </li>
@@ -90,7 +122,7 @@
             </div>
         </div>
     </div>
-    <!--==============================row3=================================-->
+    <!--==============================10 data set=================================-->
     <div class="row_3">
         <div class="container">
             <div class="row">
@@ -103,7 +135,7 @@
                                 <p class="list3title1">Energy</p>
                                 <p class="list3title2">Sources of Energy and Usage Patterns</p>
                                 <p class="list3title3">visualize energy production and consumption.</p>
-                                <a href="#" class="btn-link btn-link1">learn more<span></span></a>
+                                <p class="btn-link btn-link1" id="btn-link-1">learn more<span></span></p>
                             </div>
                         </div>
                     </li>
