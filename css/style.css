@@ -1690,3 +1690,9 @@ footer {
 img {
 	max-width: 100%;
 }
+#pop_1{
+	padding-right: 15px;
+	padding-left: 15px;
+	position: absolute;
+}
+
