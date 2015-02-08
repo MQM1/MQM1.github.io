@@ -130,12 +130,12 @@ recycling efforts, etc), especially in the "Outlook" sets.</pre>
                     <!--==============================1~5=================================-->
                     <li class="col-lg-6 col-md-6 col-sm-6">
                         <div class="box4">
-                            <figure><img src="img/page1_img4.jpg" alt=""></figure>
+                            <figure><img src="assets/imgages/energy_0.jpg" alt=""></figure>
                             <div class="info1 maxheight">
                                 <p class="list3title1">Energy</p>
                                 <p class="list3title2">Sources of Energy and Usage Patterns</p>
                                 <p class="list3title3">visualize energy production and consumption.</p>
-                                <a href="#" class="btn-link btn-link1">learn more<span></span></a>
+                                <p class="btn-link btn-link1" id="btn-link-1">learn more<span></span></p>
                             </div>
                         </div>
                     </li>
