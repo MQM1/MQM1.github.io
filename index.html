@@ -29,30 +29,37 @@
     
     <script>	
     $(function() {
-        var dialog;
-        dialog = $( "#dialog-form" ).dialog({
-    			autoOpen: false,
-    			height: 600,
-    			width: 600,
-    			modal: true,
-    			buttons: {
-    				OKay: function() {
-    					dialog.dialog( "close" );
-    				}
-    			},
-    			close: function() {
-    			},
-    			open: function (event, ui) {
+        var dialogs = new Array();
+        var i;
+        for( i=0; i<10; i++){
+            dialogs[i] = $( "#dialog-form-"+i ).dialog({
+                autoOpen: false,
+                height: 600,
+                width: 600,
+                modal: true,
+                buttons: {
+                    OKay: function() {
+                        $( this ).dialog( "close" );
+                    }
+                },
+                close: function() {
+                },
+                open: function (event, ui) {
                 $(".ui-widget-overlay").css({
                     opacity: 0.9,
                 });
             },
-    		});
+            });
+        }
+        
 		
-    		
-    		$( "#btn-link-1" ).click(function() {
-         	dialog.dialog( "open" ).focus();
-        });
+        for( i=0; i<10; i++){
+            $( "#btn-link-"+i ).click( {param1: i}, function(event) {
+                 //alert("#btn-link-"+event.data.param1);
+                dialogs[event.data.param1].dialog( "open" ).focus();
+            });
+
+        }
 	});
 		
     </script>
@@ -61,9 +68,11 @@
 
 <body>
  <!--==============================pop up form=================================-->
-  <div id="dialog-form" title="ENERGY">
+  <div id="dialog-form-0" title="ENERGY">
+    <div align="center">
     <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
     <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
 	    <p><h3>DESCRIPTION:</h3> 
             <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
             <h3>WHY: </h3>
@@ -72,6 +81,136 @@ and understand the environmental implications on the respective area grids (emis
 recycling efforts, etc), especially in the "Outlook" sets.</p>
             <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
   </div>
+  
+<div id="dialog-form-1" title="ENERGY1">
+    <div align="center">
+    <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
+    <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
+        <p><h3>DESCRIPTION:</h3> 
+            <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
+            <h3>WHY: </h3>
+            <p class="mbot_2">It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.</p>
+            <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
+  </div>
+  
+<div id="dialog-form-2" title="ENERGY2">
+    <div align="center">
+    <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
+    <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
+        <p><h3>DESCRIPTION:</h3> 
+            <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
+            <h3>WHY: </h3>
+            <p class="mbot_2">It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.</p>
+            <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
+  </div>
+  
+<div id="dialog-form-3" title="ENERGY3">
+    <div align="center">
+    <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
+    <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
+        <p><h3>DESCRIPTION:</h3> 
+            <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
+            <h3>WHY: </h3>
+            <p class="mbot_2">It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.</p>
+            <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
+  </div>
+  
+<div id="dialog-form-4" title="ENERGY4">
+    <div align="center">
+    <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
+    <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
+        <p><h3>DESCRIPTION:</h3> 
+            <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
+            <h3>WHY: </h3>
+            <p class="mbot_2">It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.</p>
+            <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
+  </div>
+  
+<div id="dialog-form-5" title="ENERGY5">
+    <div align="center">
+    <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
+    <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
+        <p><h3>DESCRIPTION:</h3> 
+            <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
+            <h3>WHY: </h3>
+            <p class="mbot_2">It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.</p>
+            <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
+  </div>
+  
+<div id="dialog-form-6" title="ENERGY6">
+    <div align="center">
+    <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
+    <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
+        <p><h3>DESCRIPTION:</h3> 
+            <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
+            <h3>WHY: </h3>
+            <p class="mbot_2">It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.</p>
+            <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
+  </div>
+  
+<div id="dialog-form-7" title="ENERGY7">
+    <div align="center">
+    <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
+    <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
+        <p><h3>DESCRIPTION:</h3> 
+            <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
+            <h3>WHY: </h3>
+            <p class="mbot_2">It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.</p>
+            <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
+  </div>
+  
+<div id="dialog-form-8" title="ENERGY8">
+    <div align="center">
+    <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
+    <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
+        <p><h3>DESCRIPTION:</h3> 
+            <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
+            <h3>WHY: </h3>
+            <p class="mbot_2">It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.</p>
+            <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
+  </div>
+  
+<div id="dialog-form-9" title="ENERGY9">
+    <div align="center">
+    <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
+    <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
+        <p><h3>DESCRIPTION:</h3> 
+            <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
+            <h3>WHY: </h3>
+            <p class="mbot_2">It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.</p>
+            <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
+  </div>
+  
+
+  
+  
 <!--==============================header=================================-->
 
 
@@ -131,109 +270,136 @@ recycling efforts, etc), especially in the "Outlook" sets.</p>
                                 <p class="list3title1">Energy</p>
                                 <p class="list3title2">Sources of Energy and Usage Patterns</p>
                                 <p class="list3title3">visualize energy production and consumption.</p>
-                                <p class="btn-link btn-link1" id="btn-link-1">learn more<span></span></p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="box4">
-                            <figure><img src="img/page1_img5.jpg" alt=""></figure>
-                            <div class="info1 maxheight">
-                                <p class="list3title1">Income vs. Spending</p>
-                                <p class="list3title2">America's Buying Habits</p>
-                                <p class="list3title3">visualize where our money is going.</p>
-                                <a href="#" class="btn-link btn-link1">learn more<span></span></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="box4">
-                            <figure><img src="img/page1_img6.jpg" alt=""></figure>
-                            <div class="info1 maxheight">
-                                <p class="list3title1">Commodity Flow</p>
-                                <p class="list3title2">Collection and Flow of Commodities</p>
-                                <p class="list3title3">visualize commodity commerce in mainland U.S..</p>
-                                <a href="#" class="btn-link btn-link1">learn more<span></span></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="box4">
-                            <figure><img src="img/page1_img7.jpg" alt=""></figure>
-                            <div class="info1 maxheight">
-                                <p class="list3title1">Music</p>
-                                <p class="list3title2">Music metadata from one million songs</p>
-                                <p class="list3title3">visualize trends and connections between music pieces without audio.</p>
-                                <a href="#" class="btn-link btn-link1">learn more<span></span></a>
+                                <p class="btn-link btn-link1" id="btn-link-0">learn more<span></span></p>
                             </div>
                         </div>
                     </li>
                     
                     <li class="col-lg-6 col-md-6 col-sm-6">
                         <div class="box4">
-                            <figure><img src="img/page1_img7.jpg" alt=""></figure>
+                            <figure><img src="assets/images/energy_0.jpg" alt=""></figure>
                             <div class="info1 maxheight">
-                                <p class="list3title1">Fashion</p>
-                                <p class="list3title2">Fertyuasa mietyas lteasas</p>
-                                <p class="list3title3">Kictaesaert asetyertya aset aplicibrdedas.</p>
+<<<<<<< HEAD
+                                <p class="list3title1">Income vs. Spending</p>
+                                <p class="list3title2">America's Buying Habits</p>
+                                <p class="list3title3">visualize where our money is going.</p>
                                 <a href="#" class="btn-link btn-link1">learn more<span></span></a>
+=======
+                                <p class="list3title1">Energy</p>
+                                <p class="list3title2">Sources of Energy and Usage Patterns</p>
+                                <p class="list3title3">visualize energy production and consumption.</p>
+                                <p class="btn-link btn-link1" id="btn-link-1">learn more<span></span></p>
+>>>>>>> FETCH_HEAD
                             </div>
                         </div>
                     </li>
-                    <!--==============================6~10=================================-->
+
                     <li class="col-lg-6 col-md-6 col-sm-6">
                         <div class="box4">
-                            <figure><img src="img/page1_img4.jpg" alt=""></figure>
+                            <figure><img src="assets/images/energy_0.jpg" alt=""></figure>
                             <div class="info1 maxheight">
-                                <p class="list3title1">Nature</p>
-                                <p class="list3title2">Migytafsas deuauyt asares</p>
-                                <p class="list3title3">Kictaesaert asetyertya aset aplicibrdedas.</p>
+<<<<<<< HEAD
+                                <p class="list3title1">Commodity Flow</p>
+                                <p class="list3title2">Collection and Flow of Commodities</p>
+                                <p class="list3title3">visualize commodity commerce in mainland U.S..</p>
                                 <a href="#" class="btn-link btn-link1">learn more<span></span></a>
+=======
+                                <p class="list3title1">Energy</p>
+                                <p class="list3title2">Sources of Energy and Usage Patterns</p>
+                                <p class="list3title3">visualize energy production and consumption.</p>
+                                <p class="btn-link btn-link1" id="btn-link-2">learn more<span></span></p>
+>>>>>>> FETCH_HEAD
                             </div>
                         </div>
                     </li>
+
                     <li class="col-lg-6 col-md-6 col-sm-6">
                         <div class="box4">
-                            <figure><img src="img/page1_img5.jpg" alt=""></figure>
+                            <figure><img src="assets/images/energy_0.jpg" alt=""></figure>
                             <div class="info1 maxheight">
-                                <p class="list3title1">Cities</p>
-                                <p class="list3title2">Btreasas lisemeyta siqades</p>
-                                <p class="list3title3">Kictaesaert asetyertya aset aplicibrdedas.</p>
+<<<<<<< HEAD
+                                <p class="list3title1">Music</p>
+                                <p class="list3title2">Music metadata from one million songs</p>
+                                <p class="list3title3">visualize trends and connections between music pieces without audio.</p>
                                 <a href="#" class="btn-link btn-link1">learn more<span></span></a>
+=======
+                                <p class="list3title1">Energy</p>
+                                <p class="list3title2">Sources of Energy and Usage Patterns</p>
+                                <p class="list3title3">visualize energy production and consumption.</p>
+                                <p class="btn-link btn-link1" id="btn-link-3">learn more<span></span></p>
+>>>>>>> FETCH_HEAD
                             </div>
                         </div>
                     </li>
+
                     <li class="col-lg-6 col-md-6 col-sm-6">
                         <div class="box4">
-                            <figure><img src="img/page1_img6.jpg" alt=""></figure>
+                            <figure><img src="assets/images/energy_0.jpg" alt=""></figure>
                             <div class="info1 maxheight">
-                                <p class="list3title1">Portraits</p>
-                                <p class="list3title2">Dolore nuyfasa kerytertas</p>
-                                <p class="list3title3">Kictaesaert asetyertya aset aplicibrdedas.</p>
-                                <a href="#" class="btn-link btn-link1">learn more<span></span></a>
+                                <p class="list3title1">Energy</p>
+                                <p class="list3title2">Sources of Energy and Usage Patterns</p>
+                                <p class="list3title3">visualize energy production and consumption.</p>
+                                <p class="btn-link btn-link1" id="btn-link-4">learn more<span></span></p>
                             </div>
                         </div>
                     </li>
+
                     <li class="col-lg-6 col-md-6 col-sm-6">
                         <div class="box4">
-                            <figure><img src="img/page1_img7.jpg" alt=""></figure>
+                            <figure><img src="assets/images/energy_0.jpg" alt=""></figure>
                             <div class="info1 maxheight">
-                                <p class="list3title1">Fashion</p>
-                                <p class="list3title2">Fertyuasa mietyas lteasas</p>
-                                <p class="list3title3">Kictaesaert asetyertya aset aplicibrdedas.</p>
-                                <a href="#" class="btn-link btn-link1">learn more<span></span></a>
+                                <p class="list3title1">Energy</p>
+                                <p class="list3title2">Sources of Energy and Usage Patterns</p>
+                                <p class="list3title3">visualize energy production and consumption.</p>
+                                <p class="btn-link btn-link1" id="btn-link-5">learn more<span></span></p>
                             </div>
                         </div>
                     </li>
-                
+
                     <li class="col-lg-6 col-md-6 col-sm-6">
                         <div class="box4">
-                            <figure><img src="img/page1_img7.jpg" alt=""></figure>
+                            <figure><img src="assets/images/energy_0.jpg" alt=""></figure>
                             <div class="info1 maxheight">
-                                <p class="list3title1">Fashion</p>
-                                <p class="list3title2">Fertyuasa mietyas lteasas</p>
-                                <p class="list3title3">Kictaesaert asetyertya aset aplicibrdedas.</p>
-                                <a href="#" class="btn-link btn-link1">learn more<span></span></a>
+                                <p class="list3title1">Energy</p>
+                                <p class="list3title2">Sources of Energy and Usage Patterns</p>
+                                <p class="list3title3">visualize energy production and consumption.</p>
+                                <p class="btn-link btn-link1" id="btn-link-6">learn more<span></span></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="box4">
+                            <figure><img src="assets/images/energy_0.jpg" alt=""></figure>
+                            <div class="info1 maxheight">
+                                <p class="list3title1">Energy</p>
+                                <p class="list3title2">Sources of Energy and Usage Patterns</p>
+                                <p class="list3title3">visualize energy production and consumption.</p>
+                                <p class="btn-link btn-link1" id="btn-link-7">learn more<span></span></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="box4">
+                            <figure><img src="assets/images/energy_0.jpg" alt=""></figure>
+                            <div class="info1 maxheight">
+                                <p class="list3title1">Energy</p>
+                                <p class="list3title2">Sources of Energy and Usage Patterns</p>
+                                <p class="list3title3">visualize energy production and consumption.</p>
+                                <p class="btn-link btn-link1" id="btn-link-8">learn more<span></span></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="box4">
+                            <figure><img src="assets/images/energy_0.jpg" alt=""></figure>
+                            <div class="info1 maxheight">
+                                <p class="list3title1">Energy</p>
+                                <p class="list3title2">Sources of Energy and Usage Patterns</p>
+                                <p class="list3title3">visualize energy production and consumption.</p>
+                                <p class="btn-link btn-link1" id="btn-link-9">learn more<span></span></p>
                             </div>
                         </div>
                     </li>

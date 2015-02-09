@@ -62,16 +62,34 @@
 <body>
  <!--==============================pop up form=================================-->
   <div id="dialog-form" title="ENERGY">
+    <div align="center">
     <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
     <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
 	    <p><h3>DESCRIPTION:</h3> 
             <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
             <h3>WHY: </h3>
             <p class="mbot_2">It would be interesting to see energy trends by location, time and source, 
 and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
 recycling efforts, etc), especially in the "Outlook" sets.</p>
-            <h3>SOURCE: <a href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
+            <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
   </div>
+  
+  <div id="dialog-form" title="INCOME vs. SPENDING">
+    <div align="center">
+    <img class="pop_pic" src="assets/images/Energy_2.png" width="230" height="180"/>
+    <img class="pop_pic1" src="assets/images/energy_1.jpg" width="230" height="180"/>
+    </div>
+	    <p><h3>DESCRIPTION:</h3> 
+            <p class="mbot_2">This data set shows many different aspects of energy usage and consumption by source: electricity in different categories, petroleum, natural gas, coal, and Annual Energy Outlook, among others.</p>
+            <h3>WHY: </h3>
+            <p class="mbot_2">It would be interesting to see energy trends by location, time and source, 
+and understand the environmental implications on the respective area grids (emissions, EPA restrictions, 
+recycling efforts, etc), especially in the "Outlook" sets.</p>
+            <h3>SOURCE: <a target="_blank" href="http://catalog.data.gov/dataset/energy-usage-analysis-system">data.gov</a></p>
+  </div>
+  
+  
 <!--==============================header=================================-->
 
 
@@ -137,12 +155,12 @@ recycling efforts, etc), especially in the "Outlook" sets.</p>
                     </li>
                     <li class="col-lg-6 col-md-6 col-sm-6">
                         <div class="box4">
-                            <figure><img src="img/page1_img5.jpg" alt=""></figure>
+                            <figure><img src="assets/images/energy_0.jpg" alt=""></figure>
                             <div class="info1 maxheight">
-                                <p class="list3title1">Cities</p>
-                                <p class="list3title2">Btreasas lisemeyta siqades</p>
-                                <p class="list3title3">Kictaesaert asetyertya aset aplicibrdedas.</p>
-                                <a href="#" class="btn-link btn-link1">learn more<span></span></a>
+                                <p class="list3title1">INCOME vs. SPENDING</p>
+                                <p class="list3title2">Sources of Energy and Usage Patterns</p>
+                                <p class="list3title3">visualize energy production and consumption.</p>
+                                <p class="btn-link btn-link1" id="btn-link-2">learn more<span></span></p>
                             </div>
                         </div>
                     </li>
