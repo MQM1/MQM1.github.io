@@ -93,7 +93,7 @@ WHY: Genetics has become a hot topic for exploration in recent years in response
 scientific advancement and reduction in cost of analysis. This could be a very rich data 
 set in exploring Human Genetics in almost any aspect, such as trait-to-ethnicity mappings, 
 regional differences, percent-of-population traits, and any trends therein.The Human Genome 
-is not only interesting to scientists, but also the general public, as it informaiton 
+is not only interesting to scientists, but also the general public, as it information 
 regarding genetics gives us insightful understanding of our history and evolution.
 
 
