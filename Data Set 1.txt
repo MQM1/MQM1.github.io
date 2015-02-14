@@ -184,4 +184,4 @@ PICTURE_2:https://www.google.com/search?q=U.S.+International+Trade+in+Goods+and+
 
 DESCRIPTION:Monthly report that provides national trade data including imports, exports, and balance of payments for goods and services. Statistics are also reported on a year-to-date basis. Data are continuously compiled and processed. Documents are collected as shipments arrive and depart, and are processed on a flow basis. The BEA uses the data to update U.S. balance of payments, gross domestic product, and national accounts. 
 
-WHY:
+WHY:International trade has flourished over the years due to the many benefits it has offered to different countries across the globe. International trade is the exchange of services, goods, and capital among various countries and regions, without much hindrance. The international trade accounts for a good part of a country’s gross domestic product. It is also one of important sources of revenue for a developing country.
