@@ -185,3 +185,14 @@ PICTURE_2:https://www.google.com/search?q=U.S.+International+Trade+in+Goods+and+
 DESCRIPTION:Monthly report that provides national trade data including imports, exports, and balance of payments for goods and services. Statistics are also reported on a year-to-date basis. Data are continuously compiled and processed. Documents are collected as shipments arrive and depart, and are processed on a flow basis. The BEA uses the data to update U.S. balance of payments, gross domestic product, and national accounts. 
 
 WHY:International trade has flourished over the years due to the many benefits it has offered to different countries across the globe. International trade is the exchange of services, goods, and capital among various countries and regions, without much hindrance. The international trade accounts for a good part of a country’s gross domestic product. It is also one of important sources of revenue for a developing country.
+
+
+5. Food Environment Atlas
+SOURCE:http://catalog.data.gov/dataset/food-environment-atlas-f4a22
+PICTURE_1:https://www.google.com/search?q=Food+Environment&es_sm=91&biw=1437&bih=757&source=lnms&tbm=isch&sa=X&ei=iL7fVN6pKtW0yAT-sYH4AQ&ved=0CAcQ_AUoAg#imgdii=_&imgrc=BHPRZ3gZ-nhWdM%253A%3BEim-sjfBqF4yBM%3Bhttp%253A%252F%252Fblogs.chapman.edu%252Fscst%252Ffiles%252F2012%252F09%252Fgreening-food-industry.jpg%3Bhttp%253A%252F%252Fblogs.chapman.edu%252Fscst%252F2014%252F07%252F24%252Ffuture-of-food-sustainability%252F%3B580%3B393
+
+PICTURE_2:https://www.google.com/search?q=Food+Environment&es_sm=91&biw=1437&bih=757&source=lnms&tbm=isch&sa=X&ei=iL7fVN6pKtW0yAT-sYH4AQ&ved=0CAcQ_AUoAg#imgdii=_&imgrc=iVncF_PqUuf1QM%253A%3BG6lhHZ8OStmuYM%3Bhttp%253A%252F%252Fwww.environment.ucla.edu%252Fnewsroom%252Fwp-content%252Fuploads%252Forganic-local-produce_lrg-xx-nyq.jpg%3Bhttp%253A%252F%252Fwww.environment.ucla.edu%252Fnewsroom%252Fthe-environmental-footprint-of-food%252F%3B450%3B299
+
+DESCRIPTION:Food environment factors--such as store/restaurant proximity, food prices, food and nutrition assistance programs, and community characteristics--interact to influence food choices and diet quality. Research is beginning to document the complexity of these interactions, but more is needed to identify causal relationships and effective policy interventions. The objectives of the Atlas are to assemble statistics on food environment indicators to stimulate research on the determinants of food choices and diet quality, and to provide a spatial overview of a community's ability to access healthy food and its success in doing so.
+
+WHY:Food is essential to life. It also forms an important part of our cultural identity, and plays an important role in the economy. People are aware that the food they eat is an important factor affecting their health, but what is less well known is the impact producing and consuming food has on the world's resources. 
