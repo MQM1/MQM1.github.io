@@ -174,3 +174,14 @@ international students eager to obtain a satisfied job after their graduations, 
 situations. It stands no chance that foreigners can get a job if local residents could not find a job. Therefore, 
 not only indigenous people concern the results of the data, foreigners and international students also interested 
 in the data. 
+
+4. U.S. International Trade in Goods and Services
+SOURCE:http://catalog.data.gov/dataset/us-international-trade-in-goods-and-services
+PICTURE_1:https://www.google.com/search?q=U.S.+International+Trade+in+Goods+and+Services&es_sm=91&source=lnms&tbm=isch&sa=X&ei=yrrfVMa1K4i6ggSbuYHYCA&ved=0CAkQ_AUoAg&biw=1437&bih=757#imgdii=_&imgrc=Cv6XzZMp23_UZM%253A%3BmADtAKk34Ss8HM%3Bhttp%253A%252F%252Fwww.falaw.us%252Fimages%252Fa7.jpg%3Bhttp%253A%252F%252Fwww.falaw.us%252Fimportanceoftrading.php%3B592%3B352
+
+
+PICTURE_2:https://www.google.com/search?q=U.S.+International+Trade+in+Goods+and+Services&es_sm=91&source=lnms&tbm=isch&sa=X&ei=yrrfVMa1K4i6ggSbuYHYCA&ved=0CAkQ_AUoAg&biw=1437&bih=757#imgdii=t53ibWdW1fnmXM%3A%3BtPwDt2t_NUXocM%3Bt53ibWdW1fnmXM%3A&imgrc=t53ibWdW1fnmXM%253A%3BTnly8DmJP4k7iM%3Bhttp%253A%252F%252Fbdanube.com%252Fimages%252Fstockvault-crystal-globe-in-hand113055.jpg%3Bhttp%253A%252F%252Fbdanube.com%252Fbludanublog%252F%3B4410%3B2683
+
+DESCRIPTION:Monthly report that provides national trade data including imports, exports, and balance of payments for goods and services. Statistics are also reported on a year-to-date basis. Data are continuously compiled and processed. Documents are collected as shipments arrive and depart, and are processed on a flow basis. The BEA uses the data to update U.S. balance of payments, gross domestic product, and national accounts. 
+
+WHY:
