@@ -2,6 +2,11 @@
 body {
 	background: #2f3133 url(../img/patternbg.jpg) 0 0 repeat;
 }
+h4 {
+	font-family: Cambria;
+	font-size: 10px;
+	font-color: #808080;
+}
 /*----------- Back to top --------------*/
 #toTop {
 	display: none;
