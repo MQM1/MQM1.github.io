@@ -643,7 +643,7 @@ hr.line1 {
 }
 /*-----------reserve_table-----------*/
 .reserve_table {
-	overflow: hidden;
+	overflow: visible;
 }
 .reserve_table figure {
 	padding: 0;
