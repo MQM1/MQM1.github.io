@@ -234,12 +234,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="./d3.v3.min.js"></script>
 <script src="./jquery-1.11.2.min.js"></script>
 
-<script type="text/javascript">
-var jsondata = $.getJSON("commodity.json",function(data){
-  
-  console.log(jsondata);
+<script> 
+var out2
 
+d3.json("commodity.json", function(error, json) {
+  if (error) return console.warn(error);
+  out2 = json;
+  console.log(out2);
 });
+
 </script>
 <script>
 
