@@ -235,9 +235,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="./jquery-1.11.2.min.js"></script>
 <!-- pull in JSON file of data . FOR SOME REASON THIS ISNT RETURNING AN ARRAY OF OBJECTS, JUST FUNCTIONS-->
  <script> 
-var out2 = [];
 
-d3.json("commodity.json", function(error, json) {
+
+var out2 = d3.json("commodity.json", function(error, json) {
   if (error) return console.warn(error);
   out2 = json;
 });
