@@ -235,8 +235,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="./jquery-1.11.2.min.js"></script>
 
 <script>
-var json = $getJSON("commodity.json");
-console.log(json);
+var json = $getJSON("commodity.json",function(jsondata){
+  console.log(json);
+});
 
 $( document ).ready(function() {
     $('#NY').css('fill', 'rgb(255,0,0)');  
