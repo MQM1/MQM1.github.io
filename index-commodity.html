@@ -238,7 +238,7 @@ $( document ).ready(function() {
 
         for(i = 0; i < out2.length; i++){
             if(out2[i]['Commodity'] === "OIL"){
-                var norm = out2[i]['Tons (thous) 02']/361171;
+                var norm = out2[i]['Tons (thous) 02']/103076;
                 var k = parseInt(norm*8);
                 $('#'+out2[i]['Origin State']).css('fill', iColor[k]);
 
