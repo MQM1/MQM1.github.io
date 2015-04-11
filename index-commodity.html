@@ -253,20 +253,14 @@ $( document ).ready(function() {
         //         $('#'+out2[i]['Origin State']).css('fill', iColor2[k]);
         //     }
         // }
-        for(i = 0; i < out2.length; i++){
-            if(out2[i]['Commodity'] === "COAL"){
-                var norm = out2[i]['Tons (thous) 02']/103076;
-                var k = parseInt(norm*8);
-                $('#'+out2[i]['Origin State']).css('fill', iColor3[k]);
-            }
-        }
         // for(i = 0; i < out2.length; i++){
-        //     if(out2[i]['Commodity'] === "METALS"){
-        //         var norm = out2[i]['Tons (thous) 02']/64545;
+        //     if(out2[i]['Commodity'] === "COAL"){
+        //         var norm = out2[i]['Tons (thous) 02']/103076;
         //         var k = parseInt(norm*8);
-        //         $('#'+out2[i]['Origin State']).css('fill', iColor4[k]);
+        //         $('#'+out2[i]['Origin State']).css('fill', iColor3[k]);
         //     }
         // }
+
         // for(i = 0; i < out2.length; i++){
         //     if(out2[i]['Commodity'] === "GRAINS"){
         //         var norm = out2[i]['Tons (thous) 02']/43;
