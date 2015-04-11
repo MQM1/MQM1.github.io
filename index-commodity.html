@@ -226,8 +226,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- pull in JSON file of data . FOR SOME REASON THIS ISNT RETURNING AN ARRAY OF OBJECTS, JUST FUNCTIONS-->
 
 <script>
-iColor = ["#ffffcc","#ffeda0","#fed976","#feb24c","#fd8d3c","#fc4e2a","#e31a1c","#bd0026","#800026"]
-
+iColor1 = ["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548","#d7301f","#b30000","#7f0000"]
+iColor2 = ["#ffffe5","#fff7bc","#fee391","#fec44f","#fe9929","#ec7014","#cc4c02","#993404","#662506"]
+iColor3 = ["#ffffff","#f0f0f0","#d9d9d9","#bdbdbd","#969696","#737373","#525252","#252525","#000000"]
+iColor4 = ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#08519c","#08306b"]
+iColor5 = ["#f7fcf5","#e5f5e0","#c7e9c0","#a1d99b","#74c476","#41ab5d","#238b45","#006d2c","#00441b"]
 
 $( document ).ready(function() {
 
@@ -238,16 +241,42 @@ $( document ).ready(function() {
 
         for(i = 0; i < out2.length; i++){
             if(out2[i]['Commodity'] === "OIL"){
-                var norm = out2[i]['Tons (thous) 02']/103076;
+                var norm = out2[i]['Tons (thous) 02']/103736;
                 var k = parseInt(norm*8);
-                $('#'+out2[i]['Origin State']).css('fill', iColor[k]);
-
+                $('#'+out2[i]['Origin State']).css('fill', iColor1[k]);
             }
-
         }
+        // for(i = 0; i < out2.length; i++){
+        //     if(out2[i]['Commodity'] === "WOOD"){
+        //         var norm = out2[i]['Tons (thous) 02']/27555;
+        //         var k = parseInt(norm*8);
+        //         $('#'+out2[i]['Origin State']).css('fill', iColor2[k]);
+        //     }
+        // }
+        // for(i = 0; i < out2.length; i++){
+        //     if(out2[i]['Commodity'] === "COAL"){
+        //         var norm = out2[i]['Tons (thous) 02']/103076;
+        //         var k = parseInt(norm*8);
+        //         $('#'+out2[i]['Origin State']).css('fill', iColor3[k]);
+        //     }
+        // }
+        // for(i = 0; i < out2.length; i++){
+        //     if(out2[i]['Commodity'] === "METALS"){
+        //         var norm = out2[i]['Tons (thous) 02']/64545;
+        //         var k = parseInt(norm*8);
+        //         $('#'+out2[i]['Origin State']).css('fill', iColor4[k]);
+        //     }
+        // }
+        // for(i = 0; i < out2.length; i++){
+        //     if(out2[i]['Commodity'] === "GRAINS"){
+        //         var norm = out2[i]['Tons (thous) 02']/43;
+        //         var k = parseInt(norm*8);
+        //         $('#'+out2[i]['Origin State']).css('fill', iColor5[k]);
+        //     }
+        // }
     })
 
-    $('#DC').css('fill', 'rgb(10,0,0)');
+//    $('#DC').css('fill', 'rgb(10,0,0)');
 //    $('#NY').css('fill', 'rgb(255,0,0)');  
 //     $('#IN').css('fill', 'rgb(100,0,0)');  
 //     $('#IL').css('fill', 'rgb(10,0,0)');  
