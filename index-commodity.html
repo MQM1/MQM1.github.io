@@ -239,13 +239,13 @@ $( document ).ready(function() {
         out2 = json;
         console.log(out2);
 
-        for(i = 0; i < out2.length; i++){
-            if(out2[i]['Commodity'] === "OIL"){
-                var norm = out2[i]['Tons (thous) 02']/103736;
-                var k = parseInt(norm*8);
-                $('#'+out2[i]['Origin State']).css('fill', iColor1[k]);
-            }
-        }
+        // for(i = 0; i < out2.length; i++){
+        //     if(out2[i]['Commodity'] === "OIL"){
+        //         var norm = out2[i]['Tons (thous) 02']/103736;
+        //         var k = parseInt(norm*8);
+        //         $('#'+out2[i]['Origin State']).css('fill', iColor1[k]);
+        //     }
+        // }
         // for(i = 0; i < out2.length; i++){
         //     if(out2[i]['Commodity'] === "WOOD"){
         //         var norm = out2[i]['Tons (thous) 02']/27555;
@@ -253,13 +253,13 @@ $( document ).ready(function() {
         //         $('#'+out2[i]['Origin State']).css('fill', iColor2[k]);
         //     }
         // }
-        // for(i = 0; i < out2.length; i++){
-        //     if(out2[i]['Commodity'] === "COAL"){
-        //         var norm = out2[i]['Tons (thous) 02']/103076;
-        //         var k = parseInt(norm*8);
-        //         $('#'+out2[i]['Origin State']).css('fill', iColor3[k]);
-        //     }
-        // }
+        for(i = 0; i < out2.length; i++){
+            if(out2[i]['Commodity'] === "COAL"){
+                var norm = out2[i]['Tons (thous) 02']/103076;
+                var k = parseInt(norm*8);
+                $('#'+out2[i]['Origin State']).css('fill', iColor3[k]);
+            }
+        }
         // for(i = 0; i < out2.length; i++){
         //     if(out2[i]['Commodity'] === "METALS"){
         //         var norm = out2[i]['Tons (thous) 02']/64545;
