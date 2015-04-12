@@ -79,7 +79,6 @@ var iColors = [
   ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#08519c","#08306b"],
   ["#f7fcf5","#e5f5e0","#c7e9c0","#a1d99b","#74c476","#41ab5d","#238b45","#006d2c","#00441b"]
 ];
-var maxArr = [103736,27555,103076,64545,43];
 var nameArr = ['OIL','WOOD','COAL','METALS','GRAINS']
 
 $( document ).ready(function() {
@@ -93,7 +92,6 @@ $( document ).ready(function() {
           for(i = 0; i < out2.length; i++){
               if(out2[i]['Commodity'] === nameArr[idx]){
                   var norm = out2[i]['Tons (thous) 02']/maxArr[idx];
-                  var k = parseInt(norm*8);
                   $('#'+out2[i]['Origin State']).css('fill', iColors[idx][k]);
               }
           }
