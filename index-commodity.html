@@ -39,8 +39,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PC4VVK');</script>
 <!-- End Google Tag Manager -->
-
-
 <!--==============================header=================================-->
 <header id="header">
       <div class="container">
@@ -48,103 +46,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
       <div class="menuheader">
           <div class="container">
-            <a href="#abc" id="oil_clk"> <img src="img/commodity/oil_highlight.png" id="oil_img" height=200 /> </a>
-            <a href="#abc" id="wood_clk"><img src="img/commodity/wood_default.png" id="wood_img" height=200 /></a>
-            <a href="#abc" id="coal_clk"><img src="img/commodity/coal_default.png" id="coal_img" height=200 /></a>
-            <a href="#abc" id="metal_clk"><img src="img/commodity/metal_default.png" id="metal_img" height=200 /></a>
-            <a href="#abc" id="grain_clk"><img src="img/commodity/grain_default.png" id="grain_img" height=200 /></a>
+            <nav class="navbar navbar-default navbar-static-top tm_navbar" role="navigation">
+                <!-- <ul class="nav sf-menu">
+                  <li><a href="index.html">home</a>
+                  </li>
+                  <li class="active"><a href="index-1.html">about me</a></li>
+                  <li><a href="#">gallery</a></li>
+                  <li><a href="https://www.linkedin.com/pub/megan-nyre/42/8bb/8b4">LinkedIn</a></li>
+                </ul> -->
+            </nav>
           </div>
       </div>
 </header>
-
-
-<script src="js/d3.v3.min.js" charset="utf-8"></script>
-<script src="js/jquery-1.11.2.min.js"></script>
-<!-- pull in JSON file of data . FOR SOME REASON THIS ISNT RETURNING AN ARRAY OF OBJECTS, JUST FUNCTIONS-->
-
-<script>
-var iColors = [
-  ["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548","#d7301f","#b30000","#7f0000"],
-  ["#ffffe5","#fff7bc","#fee391","#fec44f","#fe9929","#ec7014","#cc4c02","#993404","#662506"],
-  ["#ffffff","#f0f0f0","#d9d9d9","#bdbdbd","#969696","#737373","#525252","#252525","#000000"],
-  ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#08519c","#08306b"],
-  ["#f7fcf5","#e5f5e0","#c7e9c0","#a1d99b","#74c476","#41ab5d","#238b45","#006d2c","#00441b"]
-];
-var maxArr = [103736,27555,103076,64545,43];
-var nameArr = ['OIL','WOOD','COAL','METALS','GRAINS']
-
-$( document ).ready(function() {
-
-    var out2 = d3.json("commodity.json", function(error, json) {
-        if (error) return console.warn(error);
-        out2 = json;
-        console.log(out2);
-
-        function selectCommodity(idx){
-          for(i = 0; i < out2.length; i++){
-              if(out2[i]['Commodity'] === nameArr[idx]){
-                  var norm = out2[i]['Tons (thous) 02']/maxArr[idx];
-                  var k = parseInt(norm*8);
-                  $('#'+out2[i]['Origin State']).css('fill', iColors[idx][k]);
-              }
-          }
-        }
-        selectCommodity(0);
-
-
-        $( "#oil_clk" ).click(function() {
-            $("#oil_img").attr("src","img/commodity/oil_highlight.png");
-            $("#wood_img").attr("src","img/commodity/wood_default.png");
-            $("#coal_img").attr("src","img/commodity/coal_default.png");
-            $("#metal_img").attr("src","img/commodity/metal_default.png");
-            $("#grain_img").attr("src","img/commodity/grain_default.png");
-            selectCommodity(0);
-        });
-
-        $( "#wood_clk" ).click(function() {
-            $("#oil_img").attr("src","img/commodity/oil_default.png");
-            $("#wood_img").attr("src","img/commodity/wood_highlight.png");
-            $("#coal_img").attr("src","img/commodity/coal_default.png");
-            $("#metal_img").attr("src","img/commodity/metal_default.png");
-            $("#grain_img").attr("src","img/commodity/grain_default.png");
-            selectCommodity(1);
-        });
-
-        $( "#coal_clk" ).click(function() {
-            $("#oil_img").attr("src","img/commodity/oil_default.png");
-            $("#wood_img").attr("src","img/commodity/wood_default.png");
-            $("#coal_img").attr("src","img/commodity/coal_highlight.png");
-            $("#metal_img").attr("src","img/commodity/metal_default.png");
-            $("#grain_img").attr("src","img/commodity/grain_default.png");
-            selectCommodity(2);
-        });
-
-        $( "#metal_clk" ).click(function() {
-            $("#oil_img").attr("src","img/commodity/oil_default.png");
-            $("#wood_img").attr("src","img/commodity/wood_default.png");
-            $("#coal_img").attr("src","img/commodity/coal_default.png");
-            $("#metal_img").attr("src","img/commodity/metal_highlight.png");
-            $("#grain_img").attr("src","img/commodity/grain_default.png");
-            selectCommodity(3);
-        });
-
-        $( "#grain_clk" ).click(function() {
-            $("#oil_img").attr("src","img/commodity/oil_default.png");
-            $("#wood_img").attr("src","img/commodity/wood_default.png");
-            $("#coal_img").attr("src","img/commodity/coal_default.png");
-            $("#metal_img").attr("src","img/commodity/metal_default.png");
-            $("#grain_img").attr("src","img/commodity/grain_highlight.png");
-            selectCommodity(4);
-        });
-
-    })
-
-//    $('#DC').css('fill', 'rgb(10,0,0)');
-});
-
-
-</script>
-
 <!--==============================content=================================-->
 <div id="content">
 
@@ -308,13 +221,92 @@ $( document ).ready(function() {
 <path class="territoryborder" d="M 559.77592,593 L 559.77592,515.6691 L 682.01719,515.6691 L 682.01719,593 M 632.77323,515.6691 L 632.77323,593 M 559.77592,557.52646 L 682.01719,557.52646M 597.89432,556.61302 L 597.89432,593.73613"/>
 </svg>
 
+<script src="js/d3.v3.min.js" charset="utf-8"></script>
+<script src="js/jquery-1.11.2.min.js"></script>
+<!-- pull in JSON file of data . FOR SOME REASON THIS ISNT RETURNING AN ARRAY OF OBJECTS, JUST FUNCTIONS-->
 
+<script>
+iColor1 = ["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548","#d7301f","#b30000","#7f0000"]
+iColor2 = ["#ffffe5","#fff7bc","#fee391","#fec44f","#fe9929","#ec7014","#cc4c02","#993404","#662506"]
+iColor3 = ["#ffffff","#f0f0f0","#d9d9d9","#bdbdbd","#969696","#737373","#525252","#252525","#000000"]
+iColor4 = ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#08519c","#08306b"]
+iColor5 = ["#f7fcf5","#e5f5e0","#c7e9c0","#a1d99b","#74c476","#41ab5d","#238b45","#006d2c","#00441b"]
+
+$( document ).ready(function() {
+
+    var out2 = d3.json("commodity.json", function(error, json) {
+        if (error) return console.warn(error);
+        out2 = json;
+        console.log(out2);
+
+        // for(i = 0; i < out2.length; i++){
+        //     if(out2[i]['Commodity'] === "OIL"){
+        //         var norm = out2[i]['Tons (thous) 02']/103736;
+        //         var k = parseInt(norm*8);
+        //         $('#'+out2[i]['Origin State']).css('fill', iColor1[k]);
+        //     }
+        // }
+        // for(i = 0; i < out2.length; i++){
+        //     if(out2[i]['Commodity'] === "WOOD"){
+        //         var norm = out2[i]['Tons (thous) 02']/27555;
+        //         var k = parseInt(norm*8);
+        //         $('#'+out2[i]['Origin State']).css('fill', iColor2[k]);
+        //     }
+        // }
+        // for(i = 0; i < out2.length; i++){
+        //     if(out2[i]['Commodity'] === "COAL"){
+        //         var norm = out2[i]['Tons (thous) 02']/103076;
+        //         var k = parseInt(norm*8);
+        //         $('#'+out2[i]['Origin State']).css('fill', iColor3[k]);
+        //     }
+        // }
+        // for(i = 0; i < out2.length; i++){
+        //     if(out2[i]['Commodity'] === "METALS"){
+        //         var norm = out2[i]['Tons (thous) 02']/64545;
+        //         var k = parseInt(norm*8);
+        //         $('#'+out2[i]['Origin State']).css('fill', iColor4[k]);
+        //     }
+        // }
+        for(i = 0; i < out2.length; i++){
+            if(out2[i]['Commodity'] === "GRAINS"){
+                var norm = out2[i]['Tons (thous) 02']/43;
+                var k = parseInt(norm*8);
+                $('#'+out2[i]['Origin State']).css('fill', iColor5[k]);
+            }
+        }
+    })
+
+//    $('#DC').css('fill', 'rgb(10,0,0)');
+//    $('#NY').css('fill', 'rgb(255,0,0)');  
+//     $('#IN').css('fill', 'rgb(100,0,0)');  
+//     $('#IL').css('fill', 'rgb(10,0,0)');  
+});
+
+
+</script>
 </div><!--end of usmap div-->
 
 </div>
 <!--==============================footer=================================-->
 <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 footercol">
+                <ul class="social_icons clearfix">
+                     <li><a href="#"><img src="img/follow_icon1.png" alt=""></a></li>
+                     <li><a href="#"><img src="img/follow_icon2.png" alt=""></a></li>
+                     <li><a href="#"><img src="img/follow_icon3.png" alt=""></a></li>
+                     <li><a href="#"><img src="img/follow_icon4.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footerlogo footercol">
+                <a class="smalllogo2 logo" href="index.html"><img src="img/logofooter.png" alt=""></a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footercol">
     
+            </div>
+        </div>
+    </div>
 </footer>
 <script src="js/bootstrap.min.js"></script>
 
