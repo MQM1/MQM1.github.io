@@ -152,6 +152,12 @@ $( document ).ready(function() {
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="959" height="593">
 
 <style type="text/css">
+body {
+    -moz-transform: scale(0.66, 0.66); /* Moz-browsers */
+    zoom: 0.66; /* Other non-webkit browsers */
+    zoom: 66%; /* Webkit browsers */
+}
+
 .state 
 {
     fill:#E0E0E0;
