@@ -210,7 +210,7 @@ header {
 	margin: 0;
 	text-align: center;
 	padding: 0;
-	margin: 68px auto 60px;
+	/* margin: 68px auto 60px; */
 }
 .navbar-brand_ img {
 	max-width: 100%;
