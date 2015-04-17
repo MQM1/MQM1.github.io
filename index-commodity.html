@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="css/bootstrap.css" >
     <link rel="stylesheet" href="css/style.css">
     
-	<script src="js/jquery.js"></script>
+
+    <script src="js/jquery.js"></script>
+
 
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -85,7 +87,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <script src="js/d3.v3.min.js" charset="utf-8"></script>
-<script src="js/jquery-1.11.2.min.js"></script>
+
 <!-- pull in JSON file of data . FOR SOME REASON THIS ISNT RETURNING AN ARRAY OF OBJECTS, JUST FUNCTIONS-->
 
 <script>
@@ -111,7 +113,12 @@ $( document ).ready(function() {
               if(out2[i]['Commodity'] === nameArr[idx]){
                   var norm = out2[i]['Tons (thous) 02']/maxArr[idx];
                   var k = Math.min( parseInt(norm*8), 8);
-                  $('#'+out2[i]['Origin State']).css('fill', iColors[idx][k]);
+                  //$('#'+out2[i]['Origin State']).css('fill', iColors[idx][k]);
+                  d3.select('#'+out2[i]['Origin State']).transition().duration(2000).style('fill', iColors[idx][k]);
+
+                  // $( '#'+out2[i]['Origin State'] ).tooltip({
+                  //   content: "some too here!"
+                  // });
               }
           }
         }
@@ -165,6 +172,7 @@ $( document ).ready(function() {
 
     })
 
+    $( document ).tooltip();
 //    $('#DC').css('fill', 'rgb(10,0,0)');
 });
 
@@ -228,8 +236,9 @@ body {
 
 </style>
 
+
 <g id="hi">
-    <title>Hawaii</title>
+    <title>this is tooltip for Hawaii</title>
     <path class="state hi" d="m 233.08751,519.30948 1.93993,-3.55655 2.26326,-0.32332 0.32332,0.8083 -2.1016,3.07157 -2.42491,0 z m 10.18466,-3.71821 6.14313,2.58657 2.10159,-0.32332 1.61661,-3.87987 -0.64664,-3.39488 -4.2032,-0.48498 -4.04153,1.77827 -0.96996,3.71821 z m 30.71563,10.023 3.7182,5.49647 2.42492,-0.32332 1.13163,-0.48498 1.45495,1.29329 3.71821,-0.16166 0.96997,-1.45495 -2.90991,-1.77827 -1.93993,-3.71822 -2.1016,-3.55654 -5.8198,2.9099 -0.64664,1.77828 z m 20.20765,8.89137 1.29329,-1.93994 4.68817,0.96996 0.64665,-0.48498 6.14312,0.64664 -0.32332,1.2933 -2.58658,1.45494 -4.36485,-0.32332 -5.49648,-1.6166 z m 5.33482,5.17315 1.93994,3.87987 3.07155,-1.13163 0.32333,-1.61662 -1.61661,-2.10159 -3.71821,-0.32332 0,1.29329 z m 6.95143,-1.13163 2.26326,-2.9099 4.68817,2.42492 4.36485,1.13163 4.36486,2.74824 0,1.93993 -3.55654,1.77828 -4.84985,0.96996 -2.42491,-1.45495 -4.84984,-6.62811 z m 16.65111,15.51947 1.61661,-1.29328 3.39489,1.61662 7.59807,3.55654 3.39489,2.10159 1.6166,2.42492 1.93994,4.36485 4.04153,2.58658 -0.32332,1.2933 -3.87987,3.23322 -4.20319,1.45495 -1.45495,-0.64664 -3.07157,1.77826 -2.42491,3.23323 -2.26326,2.9099 -1.77828,-0.16166 -3.55654,-2.58658 -0.32332,-4.52651 0.64664,-2.42492 -1.61661,-5.65814 -2.1016,-1.77828 -0.16166,-2.58658 2.26326,-0.96996 2.1016,-3.07156 0.48498,-0.96997 -1.61661,-1.77828 -0.32332,-2.1016 z" id="HI"/>
 </g>
 <g id="ak">
@@ -340,6 +349,8 @@ body {
 <path class="border" d="M 211,493 V 548 L 247,593 M 0,425 H 144 L 211,493 H 297 L 350,547 V 593"/>
 <path class="territoryborder" d="M 559.77592,593 L 559.77592,515.6691 L 682.01719,515.6691 L 682.01719,593 M 632.77323,515.6691 L 632.77323,593 M 559.77592,557.52646 L 682.01719,557.52646M 597.89432,556.61302 L 597.89432,593.73613"/>
 </svg>
+
+
 
 
 </div><!--end of usmap div-->
