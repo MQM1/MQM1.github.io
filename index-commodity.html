@@ -194,7 +194,7 @@ $( document ).ready(function() {
 <!--==============================content=================================-->
 <div id="content" align="center">
 
-<div id="story" style="display: inline-block;width: 600px;height: 593px;"> 
+<div id="story"> 
   <font color="white"> some story </font> 
 </div>
 <div id="usmap" style="display: inline-block;" align="center">
@@ -206,7 +206,13 @@ body {
     zoom: 0.66; /* Other non-webkit browsers */
     zoom: 66%; /* Webkit browsers */
 }
-
+#story{
+  display: inline-block;
+  text-align: left;
+  width: 600px;
+  height: 593px;
+  float: left;
+}
 .state 
 {
     fill:#E0E0E0;
