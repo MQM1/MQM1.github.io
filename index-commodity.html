@@ -72,6 +72,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!--==============================header=================================-->
 <header id="header">
       <div class="container">
+    <!--     Commodity Flow Survey Data
+        The CFS data are used by policy makers and transportation planners in various federal, state, and local agencies for assessing the demand for transportation facilities and services, energy use, and safety risk and environmental concerns. Additionally, business owners, private researchers, and analysts use the CFS data for analyzing trends in the movement of goods, mapping spatial patterns of commodity and vehicle flows, forecasting demands for the movement of goods, and determining needs for associated infrastructure and equipment. The accuracy and breadth of the survey has greatly improved since 2002, which is a limitation of the following visualization. -->
         <h1 class="navbar-brand navbar-brand_"><a href="index.html"><img alt="Grill point" src="img/logo.png"></a></h1>
       </div>
       <div class="menuheader">
@@ -88,7 +90,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="js/d3.v3.min.js" charset="utf-8"></script>
 
-<!-- pull in JSON file of data . FOR SOME REASON THIS ISNT RETURNING AN ARRAY OF OBJECTS, JUST FUNCTIONS-->
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script>
 var iColors = [
@@ -114,7 +115,7 @@ $( document ).ready(function() {
                   var norm = out2[i]['Tons (thous) 02']/maxArr[idx];
                   var k = Math.min( parseInt(norm*8), 8);
                   //$('#'+out2[i]['Origin State']).css('fill', iColors[idx][k]);
-                  d3.select('#'+out2[i]['Origin State']).transition().duration(2000).style('fill', iColors[idx][k]);
+                  d3.select('#'+out2[i]['Origin State']).transition().duration(1000).style('fill', iColors[idx][k]);
 
                    $('#'+out2[i]['Origin State'].toLowerCase()+' > title' ).html("put some text here from json file for "+out2[i]['Origin State']);
               }
@@ -122,7 +123,7 @@ $( document ).ready(function() {
         }
 
         selectCommodity(0);
-         $("#story").html("<font color='white' size=10px> The following visualization depicts information from a 2002 Commodity Survey, specifically the state of origin for a given commodity. This visualization only depicts <em>volume</em> of commodity transported within or out of the state of origin.</font>");
+         $("#story").html("<font color='white' size=10px> The following visualization depicts information from a 2002 Commodity Survey, specifically the state of origin for a given commodity. This visualization only depicts <em>total weight</em> of commodity transported within or out of the state of origin.</font>");
 
 
         $( "#oil_clk" ).click(function() {
