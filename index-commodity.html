@@ -125,7 +125,7 @@ $( document ).ready(function() {
                   //$('#'+out2[i]['Origin State']).css('fill', iColors[idx][k]);
                   d3.select('#'+out2[i]['Origin State']).transition().duration(1000).style('fill', iColors[idx][k]);
 
-                   $('#'+out2[i]['Origin State'].toLowerCase()+' > title' ).html("put some text here from json file for "+out2[i]['Origin State']);
+                   $('#'+out2[i]['Origin State'].toLowerCase()+' > title' ).html(out2[i]['Origin State'] +":"+out2[i]['Tons (thous) 02']+" Tons (thous) 02 of "+nameArr[idx]);
               }
           }
         }
