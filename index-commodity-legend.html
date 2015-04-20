@@ -188,40 +188,16 @@ $( document ).ready(function() {
 
     })
 
-
-var legend = svg.selectAll(".legend")
-      .data(color.domain().slice().reverse())
-    .enter().append("g")
-      .attr("class", "legend")
-      .attr("transform", function(d, i) { return "translate(20," + i * 20 + ")"; });
-
-  legend.append("circle")
-      .attr("cx", width - 10)
-      .attr("cy",  10)
-      .attr("r", 9)
-      .style("fill", color);
-
-  legend.append("text")
-      .attr("x", width - 24)
-      .attr("y", 9)
-      .attr("dy", ".35em")
-      .style("text-anchor", "end")
-      .text(function(d) { return d; });
-svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
-    
-     svg.append("text")
-            .attr("x", (width / 2))
-            .attr("y",-10)
-            .attr("text-anchor", "middle")
-            .style("font-size", "16px");
-
     // $('#in > title').html("aaa")
 
     
 });
+
+legend = svg.append("g")
+    .attr("class","legend")
+    .attr("transform","translate(50,30)")
+    .style("font-size","12px")
+    .call(d3.legend)
 
 
 
@@ -296,6 +272,12 @@ body {
    stroke:#646464;
    stroke-width:1;
 }
+
+
+.legend rect {
+  fill:white;
+  stroke:black;
+  opacity:0.8;}
 
 </style>
 
