@@ -186,6 +186,11 @@ $( document ).ready(function() {
     })
 
     // $('#in > title').html("aaa")
+    legend = svg.append("g")
+    .attr("class","legend")
+    .attr("transform","translate(50,30)")
+    .style("font-size","12px")
+    .call(d3.legend)
 });
 
 
@@ -257,6 +262,13 @@ body {
    fill:#E0E0E0;
    stroke:#646464;
    stroke-width:1;
+}
+
+.legend rect 
+{
+  fill:white;
+  stroke:black;
+  opacity:0.8;
 }
 
 </style>
