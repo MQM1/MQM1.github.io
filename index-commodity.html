@@ -210,8 +210,19 @@ $( document ).ready(function() {
             var avg = parseInt(maxArr[idx]/9);
             var min = avg*i;
             var max = avg*(i+1);
+            if(min>1000){
+              min = ""+min/1000 + " K"
+            }
+            if(max>1000){
+              max = ""+max/1000 + " K"
+            }
             console.log(""+i+","+min+"-"+max);
-            d3.select("#legendt"+i).html(""+min+"-"+max);
+              if(i==8){
+                d3.select("#legendt"+i).html("> "+min);
+              }else{
+                d3.select("#legendt"+i).html(""+min+"-"+max);  
+              }
+              
           }
         }
 
@@ -514,7 +525,7 @@ width: 170px;
 
 </style>
 <div class="info legend">
-  <table>
+  <table style="color: white;">
     <tr>
       <td><i id="legendi0" style="background:#FFEDA0"></i></td><td id="legendt0">10–20</td>
     </tr>
