@@ -110,15 +110,87 @@ var iColors = [
 ];
 var maxArr = [103736,27555,103076,4545,43];
 var nameArr = ['OIL','WOOD','COAL','METALS','GRAINS']
+var storyArr = [
+"<font color='white'> \
+<ul>\
+  <li><strong>Area</strong><br/>\
+This depicts<strong> refined oil</strong>, which is mainly processed along the Gulf of Mexico and California. While crude oil is drilled in Alaska, most of this is not refined in that state. \
+  </li>\
+  <li><strong>Majority</strong><br/>\
+In 2002, the states producing the highest amount of refined oil are Texas, California, and Louisiana, which together account for over 40% of refineries in the U.S.\
+  </li>\
+</ul>\
+</font>",
+
+"<font color='white'> \
+<ul>\
+  <li><strong>Area</strong><br/>\
+While Alaska takes the cake for highest amount of forested land, the largest producing states for <strong>wood</strong> products actually reside in the Pacific Northwest and the South. \
+  </li>\
+  <li><strong>Majority</strong><br/>\
+A key note for understanding wood production in the U.S. is the type of wood being used (soft or hard). The Pacific and Southern regions produce high amounts of softwood products, which account for roughly 90% of the wood products (2002) milled and manufactured in the United States.\
+  </li>\
+</ul>\
+</font>",
+
+"<font color='white'> \
+<ul>\
+  <li><strong>Area</strong><br/>\
+Consistent with even today's data, the largest producers of <strong>coal</strong> in 2002 are Wyoming, West Virginia, Kentucky, and Pennsylvannia. Together, the production of these states accounts for roughly 60% of coal processed in the United States. \
+  </li>\
+  <li><strong>Reason</strong><br/>\
+Concentration of coal production in these states can be explained by the high concentration of coal found in the Appalachian coal region, the Interior coal region, and the Western coal region (includes the Powder River Basin).\
+  </li>\
+</ul>\
+</font>",
+
+"<font color='white'> \
+<ul>\
+  <li><strong>Area</strong><br/>\
+Suprisingly, Arizona, Minnesota, and Michigan all have high amounts (by weight) of <strong>metal ores</strong> processed within their borders. \
+  </li>\
+  <li><strong>Reason</strong><br/>\
+This can be explained by the high amount of copper processed in Arizona and the Upper Penninsula of Michigan, and iron ore from Minnesota.\
+  </li>\
+</ul>\
+</font>",
+
+"<font color='white'> \
+<ul>\
+  <li><strong>Area</strong><br/>\
+Cereals and livestock feed, categorized here as <strong>grain</strong> are concentrated in the part of the U.S. dubbed 'The Corn Belt', as corn is the largest grain crop by volume in the U.S. These states include Nebraska, Iowa and Kansas, as depicted on the map.  \
+  </li>\
+  <li><strong>Confusion</strong><br/>\
+However, other states that produce high amounts of corn, such as Illinois and Indiana are not highlighted here, indicating possible inconsistencies in the dataset.\
+  </li>\
+</ul>\
+</font>",
+
+// This depicts refined oil, which is mainly processed along the Gulf of Mexico and California. While crude oil is drilled in Alaska, most of this is not refined in that state. As shown, in 2002, the states producing the highest amount of refined oil are Texas, California, and Louisiana, which together account for over 40% of refineries in the U.S.
+
+// "<font color='white'>While Alaska takes the cake for highest amount of forested land, the largest producing states for <strong>wood</strong> products actually reside in the Pacific Northwest and the South. A key note for understanding wood production in the U.S. is the type of wood being used (soft or hard). The Pacific and Southern regions produce high amounts of softwood products, which account for roughly 90% of the wood products (2002) milled and manufactured in the United States.</font>",
+
+// "<font color='white'>Consistent with even today's data, the largest producers of <strong>coal</strong> in 2002 are Wyoming, West Virginia, Kentucky, and Pennsylvannia. Together, the production of these states accounts for roughly 60% of coal processed in the United States.  Concentration of coal production in these states can be explained by the high concentration of coal found in the Appalachian coal region, the Interior coal region, and the Western coal region (includes the Powder River Basin).</font>",
+
+// "<font color='white'> Suprisingly, Arizona, Minnesota, and Michigan all have high amounts (by weight) of <strong>metal ores</strong> processed within their borders. This can be explained by the high amount of copper processed in Arizona and the Upper Penninsula of Michigan, and iron ore from Minnesota. </font>",
+
+// "<font color='white'> Cereals and livestock feed, categorized here as <strong>grain</strong> are concentrated in the part of the U.S. dubbed 'The Corn Belt', as corn is the largest grain crop by volume in the U.S. These states include Nebraska, Iowa and Kansas, as depicted on the map. However, other states that produce high amounts of corn, such as Illinois and Indiana are not highlighted here, indicating possible inconsistencies in the dataset. </font>",
+
+];
+//"<font color='white'> The following visualization depicts information from a 2002 Commodity Survey, specifically the state of origin for a given commodity. This visualization only depicts <em>total weight</em> of commodity transported within or out of the state of origin.</font>"
 
 $( document ).ready(function() {
 
     var out2 = d3.json("commodity.json", function(error, json) {
         if (error) return console.warn(error);
         out2 = json;
-        console.log(out2);
+        // console.log(out2);
 
         function selectCommodity(idx){
+          //set story
+          $("#story").html(storyArr[idx]);
+
+          //set map
           for(i = 0; i < out2.length; i++){
               if(out2[i]['Commodity'] === nameArr[idx]){
                   var norm = out2[i]['Tons (thous) 02']/maxArr[idx];
@@ -126,13 +198,25 @@ $( document ).ready(function() {
                   //$('#'+out2[i]['Origin State']).css('fill', iColors[idx][k]);
                   d3.select('#'+out2[i]['Origin State']).transition().duration(1000).style('fill', iColors[idx][k]);
 
+                   //set tooltip
                    $('#'+out2[i]['Origin State'].toLowerCase()+' > title' ).html(out2[i]['Origin State'] +":"+out2[i]['Tons (thous) 02']+" Tons (thous) 02 of "+nameArr[idx]);
               }
           }
+
+          //<td><i id="legendi0" style="background:#FFEDA0"></i></td><td id="legendt0">10–20</td>
+          //set legend
+          for(i=0; i<9; i++){
+            d3.select("#legendi"+i).transition().duration(1000).style("background",iColors[idx][i]);
+            var avg = parseInt(maxArr[idx]/9);
+            var min = avg*i;
+            var max = avg*(i+1);
+            console.log(""+i+","+min+"-"+max);
+            d3.select("#legendt"+i).html(""+min+"-"+max);
+          }
         }
 
+        //set the default commodity selected
         selectCommodity(0);
-         $("#story").html("<font color='white'> The following visualization depicts information from a 2002 Commodity Survey, specifically the state of origin for a given commodity. This visualization only depicts <em>total weight</em> of commodity transported within or out of the state of origin.</font>");
 
 
         $( "#oil_clk" ).click(function() {
@@ -142,9 +226,6 @@ $( document ).ready(function() {
             $("#metal_img").attr("src","img/commodity/metal_default.png");
             $("#grain_img").attr("src","img/commodity/grain_default.png");
             selectCommodity(0);
-
-            $("#story").html("<font color='white'> This depicts<strong> refined oil</strong>, which is mainly processed along the Gulf of Mexico and California. While crude oil is drilled in Alaska, most of this is not refined in that state. As shown, in 2002, the states producing the highest amount of refined oil are Texas, California, and Louisiana, which together account for over 40% of refineries in the U.S.</font>");
-
         });
 
         $( "#wood_clk" ).click(function() {
@@ -154,8 +235,6 @@ $( document ).ready(function() {
             $("#metal_img").attr("src","img/commodity/metal_default.png");
             $("#grain_img").attr("src","img/commodity/grain_default.png");
             selectCommodity(1);
-
-            $("#story").html("<font color='white'>While Alaska takes the cake for highest amount of forested land, the largest producing states for <strong>wood</strong> products actually reside in the Pacific Northwest and the South. A key note for understanding wood production in the U.S. is the type of wood being used (soft or hard). The Pacific and Southern regions produce high amounts of softwood products, which account for roughly 90% of the wood products (2002) milled and manufactured in the United States.</font>");
         });
 
         $( "#coal_clk" ).click(function() {
@@ -165,8 +244,6 @@ $( document ).ready(function() {
             $("#metal_img").attr("src","img/commodity/metal_default.png");
             $("#grain_img").attr("src","img/commodity/grain_default.png");
             selectCommodity(2);
-
-            $("#story").html("<font color='white'>Consistent with even today's data, the largest producers of <strong>coal</strong> in 2002 are Wyoming, West Virginia, Kentucky, and Pennsylvannia. Together, the production of these states accounts for roughly 60% of coal processed in the United States.  Concentration of coal production in these states can be explained by the high concentration of coal found in the Appalachian coal region, the Interior coal region, and the Western coal region (includes the Powder River Basin).</font>");
         });
 
         $( "#metal_clk" ).click(function() {
@@ -176,8 +253,6 @@ $( document ).ready(function() {
             $("#metal_img").attr("src","img/commodity/metal_highlight.png");
             $("#grain_img").attr("src","img/commodity/grain_default.png");
             selectCommodity(3);
-
-            $("#story").html("<font color='white'> Suprisingly, Arizona, Minnesota, and Michigan all have high amounts (by weight) of <strong>metal ores</strong> processed within their borders. This can be explained by the high amount of copper processed in Arizona and the Upper Penninsula of Michigan, and iron ore from Minnesota. </font>");
         });
 
         $( "#grain_clk" ).click(function() {
@@ -187,8 +262,6 @@ $( document ).ready(function() {
             $("#metal_img").attr("src","img/commodity/metal_default.png");
             $("#grain_img").attr("src","img/commodity/grain_highlight.png");
             selectCommodity(4);
-
-            $("#story").html("<font color='white'> Cereals and livestock feed, categorized here as <strong>grain</strong> are concentrated in the part of the U.S. dubbed 'The Corn Belt', as corn is the largest grain crop by volume in the U.S. These states include Nebraska, Iowa and Kansas, as depicted on the map. However, other states that produce high amounts of corn, such as Illinois and Indiana are not highlighted here, indicating possible inconsistencies in the dataset. </font>");
         });
 
     })
@@ -206,9 +279,9 @@ $( document ).ready(function() {
 
 
 <!--==============================content=================================-->
-<div id="content" align="center" style="width: 1700px;margin: auto;">
+<div id="content" align="center" style="width: 1900px; height:680px; margin: auto;">
 
-<div id="story" style="margin-top:60px"> 
+<div id="story" class="storyil" style="margin-top:60px"> 
   <font color="white" size="14px"> some story </font> 
 </div>
 <div id="usmap" style="display: inline-block;" align="center">
@@ -220,6 +293,12 @@ body {
     zoom: 0.66; /* Other non-webkit browsers */
     zoom: 66%; /* Webkit browsers */
 }
+
+.storyil li strong {
+  color: yellow;
+}
+
+
 #story{
   display: inline-block;
   margin-right: 30px;
@@ -416,6 +495,56 @@ h2{
 
 
 </div><!--end of usmap div-->
+
+<style type="text/css">
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+.legend {
+text-align: left;
+line-height: 18px;
+color: #555;
+display: inline-block;
+width: 170px;
+}
+
+</style>
+<div class="info legend">
+  <table>
+    <tr>
+      <td><i id="legendi0" style="background:#FFEDA0"></i></td><td id="legendt0">10–20</td>
+    </tr>
+    <tr>
+      <td><i id="legendi1" style="background:#FFEDA0"></i></td><td id="legendt1">10–20</td>
+    </tr>
+    <tr>
+      <td><i id="legendi2" style="background:#FFEDA0"></i></td><td id="legendt2">10–20</td>
+    </tr>
+    <tr>
+      <td><i id="legendi3" style="background:#FFEDA0"></i></td><td id="legendt3">10–20</td>
+    </tr>
+    <tr>
+      <td><i id="legendi4" style="background:#FFEDA0"></i></td><td id="legendt4">10–20</td>
+    </tr>
+    <tr>
+      <td><i id="legendi5" style="background:#FFEDA0"></i></td><td id="legendt5">10–20</td>
+    </tr>
+    <tr>
+      <td><i id="legendi6" style="background:#FFEDA0"></i></td><td id="legendt6">10–20</td>
+    </tr>
+    <tr>
+      <td><i id="legendi7" style="background:#FFEDA0"></i></td><td id="legendt7">10–20</td>
+    </tr>
+    <tr>
+      <td><i id="legendi8" style="background:#FFEDA0"></i></td><td id="legendt8">10–20</td>
+    </tr>
+  </table>
+</div>
+
 
 </div>
 <!--==============================footer=================================-->
